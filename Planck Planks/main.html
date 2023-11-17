@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Oak_Planks_JE6_BE3.png">
+    <title>Planck Planks</title>
+    <style>
+        body{
+            background-color: black;
+            font-family:"MonospaceTypewriter";
+        }
+        #a,#b,#c,#d{
+            text-align: center;
+            color:white;
+        }
+        #a2,#a4{
+            font-size:30px;
+        }
+        #a3{
+            font-size: 40px;
+        }
+        #c2{
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 24px 0px;
+            border-collapse: separate;
+        }
+        #c3b{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <span id="a1">You are not in any challenge now.</span><br><br>
+        <span id="a2">You have&ensp;</span>
+        <span id="a3">0</span>
+        <span id="a4">&ensp;planck planks.</span>
+    </div><br><br><br><br>
+    <div id="b">
+        <button id="b1" onclick="game.tab = 'plank';game.subtab = 'main'"><span id="b1a">Plank</span></button>
+        <button id="b2" onclick="game.tab = 'particle'"><span id="b2a">Particle</span></button>
+        <button id="b3" onclick="game.tab = 'length'"><span id="b3a">Length</span></button>
+        <button id="b4" onclick="game.tab = 'area'"><span id="b4a">Area</span></button>
+        <button id="b5" onclick="game.tab = 'volume'"><span id="b5a">Volume</span></button>
+        <button id="b6" onclick="game.tab = 'time'"><span id="b6a">Time</span></button>
+        <button id="b7" onclick="game.tab = 'settings';game.subtab = 'stats'"><span id="b7a">Settings</span></button>
+    </div><br>
+    <div id="c">
+        <span id="c1a">You have 0 planck planks. You are getting 0 planck planks per second.</span>
+        <button id="c1b" onclick="maxAllPlankGenerators();"><span id="c1b1">Max all</span></button><br><br>
+        <table id="c2">
+            <tr id="c2a">
+                <td id="c2a1"><span id="c2a1a">Plank Generator 1</span></td>
+                <td id="c2a2"><span id="c2a2a">0</span></td>
+                <td id="c2a3"><span id="c2a3a">0/s</span></td>
+                <td id="c2a4"><span id="c2a4a">0x</span></td>
+                <td id="c2a5"><button id="c2a5a" onclick="buyPlankGenerators(0, new Decimal(1));"><span id="c2a5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2a6"><button id="c2a6a" onclick="maxPlankGenerators(0);"><span id="c2a6a1">Max</span></button></td>
+                <td id="c2a7"><button id="c2a7a"><span id="c2a7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2b">
+                <td id="c2b1"><span id="c2b1a">Plank Generator 2</span></td>
+                <td id="c2b2"><span id="c2b2a">0</span></td>
+                <td id="c2b3"><span id="c2b3a">0/s</span></td>
+                <td id="c2b4"><span id="c2b4a">0x</span></td>
+                <td id="c2b5"><button id="c2b5a" onclick="buyPlankGenerators(1, new Decimal(1));"><span id="c2b5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2b6"><button id="c2b6a" onclick="maxPlankGenerators(1);"><span id="c2b6a1">Max</span></button></td>
+                <td id="c2b7"><button id="c2b7a"><span id="c2b7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2c">
+                <td id="c2c1"><span id="c2c1a">Plank Generator 3</span></td>
+                <td id="c2c2"><span id="c2c2a">0</span></td>
+                <td id="c2c3"><span id="c2c3a">0/s</span></td>
+                <td id="c2c4"><span id="c2c4a">0x</span></td>
+                <td id="c2c5"><button id="c2c5a" onclick="buyPlankGenerators(2, new Decimal(1));"><span id="c2c5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2c6"><button id="c2c6a" onclick="maxPlankGenerators(2);"><span id="c2c6a1">Max</span></button></td>
+                <td id="c2c7"><button id="c2c7a"><span id="c2c7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2d">
+                <td id="c2d1"><span id="c2d1a">Plank Generator 4</span></td>
+                <td id="c2d2"><span id="c2d2a">0</span></td>
+                <td id="c2d3"><span id="c2d3a">0/s</span></td>
+                <td id="c2d4"><span id="c2d4a">0x</span></td>
+                <td id="c2d5"><button id="c2d5a" onclick="buyPlankGenerators(3, new Decimal(1));"><span id="c2d5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2d6"><button id="c2d6a" onclick="maxPlankGenerators(3);"><span id="c2d6a1">Max</span></button></td>
+                <td id="c2d7"><button id="c2d7a"><span id="c2d7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2e">
+                <td id="c2e1"><span id="c2e1a">Plank Generator 5</span></td>
+                <td id="c2e2"><span id="c2e2a">0</span></td>
+                <td id="c2e3"><span id="c2e3a">0/s</span></td>
+                <td id="c2e4"><span id="c2e4a">0x</span></td>
+                <td id="c2e5"><button id="c2e5a" onclick="buyPlankGenerators(4, new Decimal(1));"><span id="c2e5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2e6"><button id="c2e6a" onclick="maxPlankGenerators(4);"><span id="c2e6a1">Max</span></button></td>
+                <td id="c2e7"><button id="c2e7a"><span id="c2e7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2f">
+                <td id="c2f1"><span id="c2f1a">Plank Generator 6</span></td>
+                <td id="c2f2"><span id="c2f2a">0</span></td>
+                <td id="c2f3"><span id="c2f3a">0/s</span></td>
+                <td id="c2f4"><span id="c2f4a">0x</span></td>
+                <td id="c2f5"><button id="c2f5a" onclick="buyPlankGenerators(5, new Decimal(1));"><span id="c2f5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2f6"><button id="c2f6a" onclick="maxPlankGenerators(5);"><span id="c2f6a1">Max</span></button></td>
+                <td id="c2f7"><button id="c2f7a"><span id="c2f7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2g">
+                <td id="c2g1"><span id="c2g1a">Plank Generator 7</span></td>
+                <td id="c2g2"><span id="c2g2a">0</span></td>
+                <td id="c2g3"><span id="c2g3a">0/s</span></td>
+                <td id="c2g4"><span id="c2g4a">0x</span></td>
+                <td id="c2g5"><button id="c2g5a" onclick="buyPlankGenerators(6, new Decimal(1));"><span id="c2g5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2g6"><button id="c2g6a" onclick="maxPlankGenerators(6);"><span id="c2g6a1">Max</span></button></td>
+                <td id="c2g7"><button id="c2g7a"><span id="c2g7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2h">
+                <td id="c2h1"><span id="c2h1a">Plank Generator 8</span></td>
+                <td id="c2h2"><span id="c2h2a">0</span></td>
+                <td id="c2h3"><span id="c2h3a">0/s</span></td>
+                <td id="c2h4"><span id="c2h4a">0x</span></td>
+                <td id="c2h5"><button id="c2h5a" onclick="buyPlankGenerators(7, new Decimal(1));"><span id="c2h5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2h6"><button id="c2h6a" onclick="maxPlankGenerators(7);"><span id="c2h6a1">Max</span></button></td>
+                <td id="c2h7"><button id="c2h7a"><span id="c2h7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2i">
+                <td id="c2i1"><span id="c2i1a">Plank Generator 9</span></td>
+                <td id="c2i2"><span id="c2i2a">0</span></td>
+                <td id="c2i3"><span id="c2i3a">0/s</span></td>
+                <td id="c2i4"><span id="c2i4a">0x</span></td>
+                <td id="c2i5"><button id="c2i5a" onclick="buyPlankGenerators(8, new Decimal(1));"><span id="c2i5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2i6"><button id="c2i6a" onclick="maxPlankGenerators(8);"><span id="c2i6a1">Max</span></button></td>
+                <td id="c2i7"><button id="c2i7a"><span id="c2i7a1">Auto: On</span></button></td>
+            </tr>
+            <tr id="c2j">
+                <td id="c2j1"><span id="c2j1a">Plank Generator 10</span></td>
+                <td id="c2j2"><span id="c2j2a">0</span></td>
+                <td id="c2j3"><span id="c2j3a">0/s</span></td>
+                <td id="c2j4"><span id="c2j4a">0x</span></td>
+                <td id="c2j5"><button id="c2j5a" onclick="buyPlankGenerators(9, new Decimal(1));"><span id="c2j5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2j6"><button id="c2j6a" onclick="maxPlankGenerators(9);"><span id="c2j6a1">Max</span></button></td>
+                <td id="c2j7"><button id="c2j7a"><span id="c2j7a1">Auto: On</span></button></td>
+            </tr>
+        </table><br><br><br>
+        <div id="c3">
+            <span id="c3a">You need 1e13 planck planks to sacrifice.</span>
+            <button id="c3b" onclick="sacrifice();"><span id="c3b1">Sacrifice<br>1x -&gt; 1x</span></button>
+        </div>
+    </div>
+    <div id="d">
+        <div id="d1">
+            <button id="d1a" onclick="game.subtab = 'stats'"><span>Statistics</span></button>
+            <button id="d1b" onclick="game.subtab = 'saves'"><span>Saves</span></button>
+            <button id="d1c" onclick="game.subtab = 'infos'"><span>Informations</span></button>
+        </div><br>
+        <div id="d2">
+            <span id="d2a">You have played for 0 ms.</span>
+        </div>
+        <div id="d3">
+            <button id="d3a" onclick="hardReset()"><span id="d3a1">Hard reset</span></button>
+            <button id="d3b" onclick="importSave()"><span id="d3b1">Import save</span></button>
+            <button id="d3c" onclick="exportSave()"><span id="d3c1">Export save</span></button>
+        </div>
+        <div id="d4">
+            <span>Planck Planks v001, by 2003 BX<sub>5</sub><br>
+            Inspired by FE000000<br>
+            <a href="./changelog.html">Changelog</a></span>
+        </div>
+    </div>
+</body>
+<script src="./break_eternity.js"></script>
+<script src="./game.js"></script>
+<script src="./plank/plankGenerators.js"></script>
+<script src="./plank/sacrifice.js"></script>
+<script src="./settings/hotkeys.js"></script>
+<script src="./settings/saves.js"></script>
+</html>
+<!--
+Hello, world!
+-->
