@@ -29,6 +29,80 @@ function exportSave() {
 function hardReset() {
     sure = confirm("Are you sure?")
     if (sure) {
-        importSave(originalSave)
+        game = {
+            tab:"plank",
+            subtab:"main",
+            playedTime:0,
+            planks:new Decimal(10),
+            planksPerSec:new Decimal(0),
+            plankGenerators:[
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0)],
+            plankGeneratorsBought:[
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0)],
+            plankGeneratorsPerSec:[
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0),
+                new Decimal(0)],
+            plankGeneratorsMult:[
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1),
+                new Decimal(1)],
+            plankGeneratorsCost:[
+                new Decimal(10),
+                new Decimal(100),
+                new Decimal(1000),
+                new Decimal(100000),
+                new Decimal("1e8"),
+                new Decimal("1e13"),
+                new Decimal("1e21"),
+                new Decimal("1e34"),
+                new Decimal("1e55"),
+                new Decimal("1e89")],
+            plankGeneratorsStartingCost:[
+                new Decimal(10),
+                new Decimal(100),
+                new Decimal(1000),
+                new Decimal(100000),
+                new Decimal("1e8"),
+                new Decimal("1e13"),
+                new Decimal("1e21"),
+                new Decimal("1e34"),
+                new Decimal("1e55"),
+                new Decimal("1e89")],
+            sacrificeMultiplier:new Decimal(1),
+            sacrificeRequire:new Decimal("1e13")
+        };
     }
 }
