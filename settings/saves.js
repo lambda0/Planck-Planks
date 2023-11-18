@@ -1,5 +1,4 @@
-function importSave() {
-    save = prompt("Input your save:")
+function importSave(save) {
     game = JSON.parse(atob(save));
     decimalNum = [
         "planks",
