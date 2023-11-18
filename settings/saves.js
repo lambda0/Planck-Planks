@@ -30,6 +30,6 @@ function exportSave() {
 function hardReset() {
     sure = confirm("Are you sure?")
     if (sure) {
-        game = originalSave
+        importSave(originalSave)
     }
 }
