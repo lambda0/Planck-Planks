@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    font-family:"MonospaceTypewriter";
+}
+#a,#b,#c,#d{
+    text-align: center;
+    color:white;
+}
+#a2,#a4{
+    font-size:30px;
+}
+#a3{
+    font-size: 40px;
+}
+#c2{
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 24px 0px;
+}
+#c3{
+    text-align: center;
+}
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,
+#c1b1,#c3b,
+#c2a5a,#c2b5a,#c2c5a,#c2d5a,#c2e5a,#c2f5a,#c2g5a,#c2h5a,#c2i5a,#c2j5a,#c2k5a,
+#c2a6a,#c2b6a,#c2c6a,#c2d6a,#c2e6a,#c2f6a,#c2g6a,#c2h6a,#c2i6a,#c2j6a,#c2k6a,
+#c2a7a,#c2b7a,#c2c7a,#c2d7a,#c2e7a,#c2f7a,#c2g7a,#c2h7a,#c2i7a,#c2j7a,#c2k7a,
+#d1a,#d1b,#d1c,
+#d3a,#d3b,#d3c{
+    font-family:"MonospaceTypewriter";
+    font-size:16px;
+}
+#b1{
+    background-color:red;
+}
+#b2{
+    background-color:yellow;
+}
+#b3{
+    background-color:lime;
+}
+#b4{
+    background-color:cyan;
+}
+#b5{
+    background-color:blue;
+}
+#b6{
+    background-color:magenta;
+}
+#b7,#d1a,#d1b,#d1c,#d3a,#d3b,#d3c{
+    background-color:gray;
+}
+#c3b{
+    background-color:black;
+    color:white;
+    text-align:center;
+    width: 100%;
+}
+#c1b,
+#c2a5a,#c2b5a,#c2c5a,#c2d5a,#c2e5a,#c2f5a,#c2g5a,#c2h5a,#c2i5a,#c2j5a,#c2k5a,
+#c2a6a,#c2b6a,#c2c6a,#c2d6a,#c2e6a,#c2f6a,#c2g6a,#c2h6a,#c2i6a,#c2j6a,#c2k6a,
+#c2a7a,#c2b7a,#c2c7a,#c2d7a,#c2e7a,#c2f7a,#c2g7a,#c2h7a,#c2i7a,#c2j7a,#c2k7a{
+    background-color: white;
+}

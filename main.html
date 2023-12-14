@@ -6,31 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Oak_Planks_JE6_BE3.png">
     <title>Planck Planks</title>
-    <style>
-        body{
-            background-color: black;
-            font-family:"MonospaceTypewriter";
-        }
-        #a,#b,#c,#d{
-            text-align: center;
-            color:white;
-        }
-        #a2,#a4{
-            font-size:30px;
-        }
-        #a3{
-            font-size: 40px;
-        }
-        #c2{
-            margin-left: auto;
-            margin-right: auto;
-            border-spacing: 24px 0px;
-            border-collapse: separate;
-        }
-        #c3b{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="a">
@@ -142,10 +118,19 @@
                 <td id="c2j6"><button id="c2j6a" onclick="maxPlankGenerators(9);"><span id="c2j6a1">Max</span></button></td>
                 <td id="c2j7"><button id="c2j7a"><span id="c2j7a1">Auto: On</span></button></td>
             </tr>
+            <tr id="c2k">
+                <td id="c2k1"><span id="c2k1a">Booster</span></td>
+                <td id="c2k2"><span id="c2k2a">0</span></td>
+                <td id="c2k3"><span id="c2k3a">--</span></td>
+                <td id="c2k4"><span id="c2k4a">0x</span></td>
+                <td id="c2k5"><button id="c2k5a" onclick="buyBoosters(new Decimal(1));"><span id="c2k5a1">Cost: 0 Planks</span></button></td>
+                <td id="c2k6"><button id="c2k6a" onclick="maxBoosters();"><span id="c2k6a1">Max</span></button></td>
+                <td id="c2k7"><button id="c2k7a"><span id="c2k7a1">Auto: On</span></button></td>
+            </tr>
         </table><br><br><br>
         <div id="c3">
             <span id="c3a">You need 1e13 planck planks to sacrifice.</span>
-            <button id="c3b" onclick="sacrifice();"><span id="c3b1">Sacrifice<br>1x -&gt; 1x</span></button>
+            <button id="c3b" onclick="sacrifice();"><span id="c3b1">Sacrifice<br>1x -&gt; 1x<br>+0, x0</span></button>
         </div>
     </div>
     <div id="d">
@@ -159,11 +144,11 @@
         </div>
         <div id="d3">
             <button id="d3a" onclick="hardReset()"><span id="d3a1">Hard reset</span></button>
-            <button id="d3b" onclick="save = prompt("Input your save:");importSave(save)"><span id="d3b1">Import save</span></button>
+            <button id="d3b" onclick="save = prompt('Input your save:');importSave(save)"><span id="d3b1">Import save</span></button>
             <button id="d3c" onclick="exportSave()"><span id="d3c1">Export save</span></button>
         </div>
         <div id="d4">
-            <span>Planck Planks v001, by 2003 BX<sub>5</sub><br>
+            <span>Planck Planks v001, by 2003 BX<sub>5</sub> (zxcghjijkgf)<br>
             Inspired by FE000000<br>
             <a href="./changelog.html">Changelog</a></span>
         </div>
@@ -171,6 +156,7 @@
 </body>
 <script src="./break_eternity.js"></script>
 <script src="./game.js"></script>
+<script src="./plank/boosters.js"></script>
 <script src="./plank/plankGenerators.js"></script>
 <script src="./plank/sacrifice.js"></script>
 <script src="./settings/hotkeys.js"></script>
