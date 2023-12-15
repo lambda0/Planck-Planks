@@ -50,7 +50,7 @@ function plankGeneratorsValues(){
             .pow(game.plankGeneratorsBought[n]));
         game.plankGeneratorsMult[n] = 
             n == 0 ? 
-            game.sacrificeMultiplier.mul(new Decimal(1.05).pow(game.plankGeneratorsBought[0])) : 
+            game.sacrificeMult.mul(new Decimal(1.05).pow(game.plankGeneratorsBought[0])) : 
             new Decimal(1.05).pow(game.plankGeneratorsBought[n]);
     };
 };
